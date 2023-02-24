@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet" />
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <title>TV SHOWE</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light  bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold fs-3" href="#">GOT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-lg-between" id="navbarNavDarkDropdown">
+
+                <ul class="navbar-nav">
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle  fs-4" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                        Which Episode from Which Season?              
+                    </a>
+                        <!-- items -->
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink" id="dropdown">
+                            <li>
+                                <a class="dropdown-item " href="#">SEASON 1</a>
+                                <ul class="dropdown-menu dropdown-submenu dropdown-menu-dark" id="S1ul">
+                                    <!-- <li>
+                                    <a class="dropdown-item" href="#">Submenu item 1</a>
+                                </li> -->
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">SEASON 2 </a>
+                                <ul class="dropdown-menu dropdown-submenu dropdown-menu-dark" id="S2ul">
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">SEASON 3 </a>
+                                <ul class="dropdown-menu dropdown-submenu dropdown-menu-dark" id="S3ul">
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">SEASON 4 </a>
+                                <ul class="dropdown-menu dropdown-submenu dropdown-menu-dark" id="S4ul">
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">SEASON 5 </a>
+                                <ul class="dropdown-menu dropdown-submenu dropdown-menu-dark" id="S5ul">
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">SEASON 6 </a>
+                                <ul class="dropdown-menu dropdown-submenu dropdown-menu-dark" id="S6ul">
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">SEASON 7 </a>
+                                <ul class="dropdown-menu dropdown-submenu dropdown-menu-dark" id="S7ul">
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">SEASON 8 </a>
+                                <ul class="dropdown-menu dropdown-submenu dropdown-menu-dark" id="S8ul">
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex " id="searchForm">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Game Of Thrones</h1>
+        <!-- 8 Seasons | 73 Episodes | -->
+        <div class="container">
+            <div class="row align-items-start  poster">
+                <div class="col-sm-12 col-lg-6">
+                    <img src="https://s-cdn-sj.eu-central-1.linodeobjects.com/game-of-thrones/hdtv.webp" alt="season1" id="imgHeader" />
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    Nine noble families wage war against each other in order to gain control over the mythical land of Westeros. Meanwhile, a force is rising after millenniums and threatens the existence of living men.
+                    <ul class="mt-4 general">
+                        <li>8 SEASONS | 73 EPISODES |</li>
+                        <li>
+                            Genre : Action | Adventure | Fantasy | Serial drama | Tragedy
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <img src="" alt="">
+            <!-- season1 -->
+            <div class="row align-items-center m-4 ">
+                <div class="col  seasonSection">
+                    <details>
+                        <summary class="p-3 fs-5 fw-bolder">SEASON 1</summary>
+                        <ul id="S01"></ul>
+                    </details>
+                </div>
+            </div>
+            <!-- season2 -->
+            <div class="row align-items-center m-4">
+                <div class="col seasonSection">
+                    <details>
+                        <summary class="p-3 fs-5 fw-bolder">SEASON 2</summary>
+                        <ul id="S02"></ul>
+                    </details>
+                </div>
+            </div>
+            <!-- season3 -->
+            <div class="row align-items-center m-4">
+                <div class="col seasonSection">
+                    <details>
+                        <summary class="p-3 fs-5 fw-bolder">SEASON 3</summary>
+                        <ul id="S03"></ul>
+                    </details>
+                </div>
+            </div>
+            <!-- season4 -->
+            <div class="row align-items-center m-4">
+                <div class="col seasonSection">
+                    <details>
+                        <summary class=" p-3 fs-5 fw-bolder ">SEASON 4</summary>
+                        <ul id="S04"></ul>
+                    </details>
+                </div>
+            </div>
+            <!-- season5 -->
+            <div class="row align-items-center m-4 ">
+                <div class="col seasonSection ">
+                    <details>
+                        <summary class="p-3 fs-5 fw-bolder ">SEASON 5</summary>
+                        <ul id="S05"></ul>
+                    </details>
+                </div>
+            </div>
+            <!-- season6 -->
+            <div class="row align-items-center m-4 ">
+                <div class="col seasonSection ">
+                    <details>
+                        <summary class="p-3 fs-5 fw-bolder ">SEASON 6</summary>
+                        <ul id="S06"></ul>
+                    </details>
+                </div>
+            </div>
+            <!-- season7 -->
+            <div class="row align-items-center m-4 ">
+                <div class="col seasonSection ">
+                    <details>
+                        <summary class="p-3 fs-5 fw-bolder ">SEASON 7</summary>
+                        <ul id="S07"></ul>
+                    </details>
+                </div>
+            </div>
+            <!-- season8 -->
+            <div class="row align-items-center m-4 ">
+                <div class="col seasonSection ">
+                    <details>
+                        <summary class="p-3 fs-5 fw-bolder ">SEASON 8</summary>
+                        <ul id="S08"></ul>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>ZAHRA</p>
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js "></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
+    <script src="js.js "></script>
+</body>
+
+</html>
