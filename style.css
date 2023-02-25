@@ -108,3 +108,17 @@
     #navbarDropdownMenuLink {
         color: #c6d4df;
     }
+    
+    .afterClick {
+        background-color: hsl(223, 17%, 16%);
+    }
+    
+    .afterMouseLeave {
+        background: linear-gradient(to right, hwb(214 17% 66%), #1b2838);
+    }
+    
+    a.btn {
+        background-color: #1b2838;
+        font-weight: lighter;
+        box-shadow: -5px 3px 6px hwb(224 43% 44%);
+    }

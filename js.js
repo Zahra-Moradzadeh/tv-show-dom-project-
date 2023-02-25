@@ -37,6 +37,13 @@ async function GOT() {
             p.setAttribute("class", "pt-3")
             p.innerHTML = res.data[i].summary;
             p.style.fontStyle = "italic"
+                // add link
+            const link = document.createElement("a")
+            div2.append(link)
+            link.setAttribute("class", "btn btn-dark")
+            link.innerText = "Go to tvmaze for more info . . ."
+            link.href = res.data[i].url
+            link.target = "_blank"
 
 
 
@@ -66,6 +73,13 @@ async function GOT() {
             p.setAttribute("class", "pt-3")
             p.innerHTML = res.data[i].summary;
             p.style.fontStyle = "italic"
+                // add link
+            const link = document.createElement("a")
+            div2.append(link)
+            link.setAttribute("class", "btn btn-dark")
+            link.innerText = "Go to tvmaze for more info . . ."
+            link.href = res.data[i].url
+            link.target = "_blank"
             j2 += 1
 
         } else if (i >= 20 && i < 30) {
@@ -94,6 +108,13 @@ async function GOT() {
             p.setAttribute("class", "pt-3")
             p.innerHTML = res.data[i].summary;
             p.style.fontStyle = "italic"
+                // add link
+            const link = document.createElement("a")
+            div2.append(link)
+            link.setAttribute("class", "btn btn-dark")
+            link.innerText = "Go to tvmaze for more info . . ."
+            link.href = res.data[i].url
+            link.target = "_blank"
             j3 += 1
 
         } else if (i >= 30 && i < 40) {
@@ -122,6 +143,13 @@ async function GOT() {
             p.setAttribute("class", "pt-3")
             p.innerHTML = res.data[i].summary;
             p.style.fontStyle = "italic"
+                // add link
+            const link = document.createElement("a")
+            div2.append(link)
+            link.setAttribute("class", "btn btn-dark")
+            link.innerText = "Go to tvmaze for more info . . ."
+            link.href = res.data[i].url
+            link.target = "_blank"
             j4 += 1
 
         } else if (i >= 40 && i < 50) {
@@ -150,6 +178,13 @@ async function GOT() {
             p.setAttribute("class", "pt-3")
             p.style.fontStyle = "italic"
             p.innerHTML = res.data[i].summary;
+            // add link
+            const link = document.createElement("a")
+            div2.append(link)
+            link.setAttribute("class", "btn btn-dark")
+            link.innerText = "Go to tvmaze for more info . . ."
+            link.href = res.data[i].url
+            link.target = "_blank"
             j5 += 1
         } else if (i >= 50 && i < 60) {
             const ul06 = document.querySelector("#S06")
@@ -177,6 +212,13 @@ async function GOT() {
             p.setAttribute("class", "pt-3")
             p.style.fontStyle = "italic"
             p.innerHTML = res.data[i].summary;
+            // add link
+            const link = document.createElement("a")
+            div2.append(link)
+            link.setAttribute("class", "btn btn-dark")
+            link.innerText = "Go to tvmaze for more info . . ."
+            link.href = res.data[i].url
+            link.target = "_blank"
             j6 += 1
 
         } else if (i >= 60 && i < 67) {
@@ -205,6 +247,13 @@ async function GOT() {
             p.setAttribute("class", "pt-3")
             p.style.fontStyle = "italic"
             p.innerHTML = res.data[i].summary;
+            // add link
+            const link = document.createElement("a")
+            div2.append(link)
+            link.setAttribute("class", "btn btn-dark")
+            link.innerText = "Go to tvmaze for more info . . ."
+            link.href = res.data[i].url
+            link.target = "_blank"
             j7 += 1
 
         } else if (i >= 67 && i < 73) {
@@ -233,6 +282,13 @@ async function GOT() {
             p.setAttribute("class", "pt-3")
             p.style.fontStyle = "italic"
             p.innerHTML = res.data[i].summary;
+            // add link
+            const link = document.createElement("a")
+            div2.append(link)
+            link.setAttribute("class", "btn btn-dark")
+            link.innerText = "Go to tvmaze for more info . . ."
+            link.href = res.data[i].url
+            link.target = "_blank"
             j8 += 1
         }
     }
@@ -260,16 +316,32 @@ async function GOT() {
             liOfDropDown.append(aOfli)
             aOfli.setAttribute("class", "dropdown-item")
             i == 9 ? aOfli.innerText = `S01E${i+1} : ${res.data[i].name}` : aOfli.innerText = `S01E0${i+1} : ${res.data[i].name}`
-
             aOfli.setAttribute("href", `#${i}`)
+                // add style when item selected
+            let liEl = document.getElementById(`${i}`)
+            aOfli.addEventListener("click", function() {
+                liEl.setAttribute("class", "afterClick")
+                liEl.addEventListener("click", function() {
+                    liEl.setAttribute("class", "afterMouseLeave")
+                })
+            })
+
         } else if (i >= 10 && i < 20) {
             const liOfDropDown = document.createElement("li")
             S2ulOfDropDown.append(liOfDropDown)
             const aOfli = document.createElement("a")
             liOfDropDown.append(aOfli)
             aOfli.setAttribute("class", "dropdown-item")
-            aOfli.innerText = `S02E${t2+1} : ${res.data[i].name}`
+            t2 < 9 ? aOfli.innerText = `S02E0${t2+1} : ${res.data[i].name}` : aOfli.innerText = `S02E${t2+1} : ${res.data[i].name}`
             aOfli.setAttribute("href", `#${i}`)
+                // add style when item selected
+            let liEl = document.getElementById(`${i}`)
+            aOfli.addEventListener("click", function() {
+                liEl.setAttribute("class", "afterClick")
+                liEl.addEventListener("click", function() {
+                    liEl.setAttribute("class", "afterMouseLeave")
+                })
+            })
             t2 += 1
         } else if (i >= 20 && i < 30) {
             const liOfDropDown = document.createElement("li")
@@ -277,8 +349,16 @@ async function GOT() {
             const aOfli = document.createElement("a")
             liOfDropDown.append(aOfli)
             aOfli.setAttribute("class", "dropdown-item")
-            aOfli.innerText = `S03E${t3+1} : ${res.data[i].name}`
+            t3 < 9 ? aOfli.innerText = `S03E0${t3+1} : ${res.data[i].name}` : aOfli.innerText = `S03E${t3+1} : ${res.data[i].name}`
             aOfli.setAttribute("href", `#${i}`)
+                // add style when item selected
+            let liEl = document.getElementById(`${i}`)
+            aOfli.addEventListener("click", function() {
+                liEl.setAttribute("class", "afterClick")
+                liEl.addEventListener("click", function() {
+                    liEl.setAttribute("class", "afterMouseLeave")
+                })
+            })
             t3 += 1
         } else if (i >= 30 && i < 40) {
             const liOfDropDown = document.createElement("li")
@@ -286,8 +366,16 @@ async function GOT() {
             const aOfli = document.createElement("a")
             liOfDropDown.append(aOfli)
             aOfli.setAttribute("class", "dropdown-item")
-            aOfli.innerText = `S04E${t4+1} : ${res.data[i].name}`
+            t4 < 9 ? aOfli.innerText = `S04E0${t4+1} : ${res.data[i].name}` : aOfli.innerText = `S04E${t4+1} : ${res.data[i].name}`
             aOfli.setAttribute("href", `#${i}`)
+                // add style when item selected
+            let liEl = document.getElementById(`${i}`)
+            aOfli.addEventListener("click", function() {
+                liEl.setAttribute("class", "afterClick")
+                liEl.addEventListener("click", function() {
+                    liEl.setAttribute("class", "afterMouseLeave")
+                })
+            })
             t4 += 1
         } else if (i >= 40 && i < 50) {
             const liOfDropDown = document.createElement("li")
@@ -295,8 +383,16 @@ async function GOT() {
             const aOfli = document.createElement("a")
             liOfDropDown.append(aOfli)
             aOfli.setAttribute("class", "dropdown-item")
-            aOfli.innerText = `S05E${t5+1} : ${res.data[i].name}`
+            t5 < 9 ? aOfli.innerText = `S05E0${t5+1} : ${res.data[i].name}` : aOfli.innerText = `S05E${t5+1} : ${res.data[i].name}`
             aOfli.setAttribute("href", `#${i}`)
+                // add style when item selected
+            let liEl = document.getElementById(`${i}`)
+            aOfli.addEventListener("click", function() {
+                liEl.setAttribute("class", "afterClick")
+                liEl.addEventListener("click", function() {
+                    liEl.setAttribute("class", "afterMouseLeave")
+                })
+            })
             t5 += 1
         } else if (i >= 50 && i < 60) {
             const liOfDropDown = document.createElement("li")
@@ -304,8 +400,16 @@ async function GOT() {
             const aOfli = document.createElement("a")
             liOfDropDown.append(aOfli)
             aOfli.setAttribute("class", "dropdown-item")
-            aOfli.innerText = `S06E${t6+1} : ${res.data[i].name}`
+            t6 < 9 ? aOfli.innerText = `S06E0${t6+1} : ${res.data[i].name}` : aOfli.innerText = `S06E${t6+1} : ${res.data[i].name}`
             aOfli.setAttribute("href", `#${i}`)
+                // add style when item selected
+            let liEl = document.getElementById(`${i}`)
+            aOfli.addEventListener("click", function() {
+                liEl.setAttribute("class", "afterClick")
+                liEl.addEventListener("click", function() {
+                    liEl.setAttribute("class", "afterMouseLeave")
+                })
+            })
             t6 += 1
         } else if (i >= 60 && i < 67) {
             const liOfDropDown = document.createElement("li")
@@ -313,8 +417,16 @@ async function GOT() {
             const aOfli = document.createElement("a")
             liOfDropDown.append(aOfli)
             aOfli.setAttribute("class", "dropdown-item")
-            aOfli.innerText = `S07E${t7+1} : ${res.data[i].name}`
+            t7 < 9 ? aOfli.innerText = `S07E0${t7+1} : ${res.data[i].name}` : aOfli.innerText = `S07E${t7+1} : ${res.data[i].name}`
             aOfli.setAttribute("href", `#${i}`)
+                // add style when item selected
+            let liEl = document.getElementById(`${i}`)
+            aOfli.addEventListener("click", function() {
+                liEl.setAttribute("class", "afterClick")
+                liEl.addEventListener("click", function() {
+                    liEl.setAttribute("class", "afterMouseLeave")
+                })
+            })
             t7 += 1
         } else if (i >= 67 && i < 73) {
             const liOfDropDown = document.createElement("li")
@@ -322,8 +434,16 @@ async function GOT() {
             const aOfli = document.createElement("a")
             liOfDropDown.append(aOfli)
             aOfli.setAttribute("class", "dropdown-item")
-            aOfli.innerText = `S08E${t8+1} : ${res.data[i].name}`
+            t8 < 9 ? aOfli.innerText = `S08E0${t8+1} : ${res.data[i].name}` : aOfli.innerText = `S08E${t8+1} : ${res.data[i].name}`
             aOfli.setAttribute("href", `#${i}`)
+                // add style when item selected
+            let liEl = document.getElementById(`${i}`)
+            aOfli.addEventListener("click", function() {
+                liEl.setAttribute("class", "afterClick")
+                liEl.addEventListener("click", function() {
+                    liEl.setAttribute("class", "afterMouseLeave")
+                })
+            })
             t8 += 1
         }
 
