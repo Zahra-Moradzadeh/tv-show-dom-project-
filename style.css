@@ -122,3 +122,13 @@
         font-weight: lighter;
         box-shadow: -5px 3px 6px hwb(224 43% 44%);
     }
+    
+    .form-control {
+        width: 250px;
+    }
+    
+    @media screen and (max-width:995px) {
+        .navbar-nav {
+            display: none;
+        }
+    }

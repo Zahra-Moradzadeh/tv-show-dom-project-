@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -34,7 +36,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle  fs-4" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
                         Which Episode from Which Season?              
-                    </a>
+                        </a>
                         <!-- items -->
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink" id="dropdown">
                             <li>
@@ -86,8 +88,8 @@
                     </li>
                 </ul>
                 <form class="d-flex " id="searchForm">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
+                    <input class="form-control me-2" type="search" placeholder="Search Title of Episode ..." aria-label="Search" id="query" onkeyup="myFunction()">
+                    <!-- <button class="btn btn-outline-light" id="buttonSearch">Search</button> -->
                 </form>
 
             </div>

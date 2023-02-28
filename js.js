@@ -455,19 +455,31 @@ async function GOT() {
 
 GOT();
 
-const form = document.querySelector("#searchForm");
-form.addEventListener("submit", async function(e) {
-    e.preventDefault();
-    const searchTerm = form.elements.query.value;
-    const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchTerm}`);
-    // console.log(res);
-    // makeResult(res.data);
-    form.elements.query.value = "";
-});
 
-const makeResult = shows => {
-    console.log(shows)
-    for (let result of shows) {
+// live search
 
+function myFunction() {
+
+    let details = document.querySelectorAll("details")
+        // let seasonSections = document.querySelectorAll(".seasonSection")
+    for (let i = 0; i < details.length; i++) {
+        let input, filter, ul, li, txtValue;
+        input = document.getElementById("query");
+        filter = input.value.toUpperCase();
+        // ////////////////////////////////////////////
+        ul = details[i].querySelector("ul");
+        li = ul.getElementsByTagName("li");
+        // //////////////////////
+        for (let j = 0; j < li.length; j++) {
+            h5 = li[j].getElementsByTagName("h5")[0];
+            txtValue = h5.textContent || h5.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                details[i].open = true
+                li[j].style.display = "";
+            } else {
+                li[j].style.display = "none";
+                // details[i].open = false
+            }
+        }
     }
-};
+}
